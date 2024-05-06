@@ -1,0 +1,202 @@
+.App {
+  text-align: center;
+  padding: 0rem;
+}
+
+.App-header {
+  margin-top: 1rem;
+  background-color: #129bff;
+  color: #ffff;
+  padding: 3rem;
+}
+.heading {
+  margin-top: 1vw; /* This will be 2% of the viewport width */
+  transition: margin-top 0.3s ease;
+  margin-right: 25%;
+  
+}
+
+@media (max-width: 480px) {
+  .heading {
+    margin-top: 4%; /* Adjust the value as needed for phone display */
+  }
+}
+
+.main {
+  margin-top: 1rem;
+  
+}
+
+.contact-form {
+  background-color: #129BFF;
+  color: #ffff;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-right:20%;
+  margin-left: 20%;
+  border: 1px solid #20e300;
+  border-radius: 0.25rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  
+}
+
+label {
+  display: block;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  width: 45%;
+  margin-left: 4%;
+  padding: 0.5rem;
+  border: 1px solid #20e300;
+  border-radius: 0.25rem;
+}
+.doctorsname{
+  margin-top: 2rem;
+  background-color: #ffff;
+  padding: 0.5rem;
+  
+}
+.doctorsname1{
+  margin-top: 2rem;
+  background-color: #129BFF;
+  padding: 0.5rem;
+  color: #ffff;
+  
+}
+.image2{
+  width: fit-content;
+  
+  /* rounded-full mr-4 */
+}
+.card-container{
+  margin-top: 2rem;
+  display: flex;
+  background-color: #129bff;
+  padding: 7rem;
+}
+button {
+  padding: 0.5rem 2rem;
+  background-color: #ffff;
+  color: #129bff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #064cff;
+}
+
+footer {
+  margin-top: 2rem;
+  background-color: #ffff;
+  padding: 1rem;
+}
+.App-header1 {
+  background-color: #ffff;
+  color: #129BFF;
+  padding: 0;
+  display: flex;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 100%;
+  
+}
+
+.fixed-container {
+  display: fixed;
+  justify-content: right;
+  align-items: right;
+}
+
+
+/* logo*/
+.image-container {
+  width: 7%;
+  height: 7%;
+  padding-top: 0rem;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 100px) {
+  .image-container img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+.carousel {
+  width: 50%; /* add this line */
+align-items: 'right';
+}
+
+.carousel-inner > .item > img {
+  height: 360px;
+  object-fit: contain;
+}
+.carousel-left {
+  direction: ltr; /* Set carousel direction to left-to-right */
+}
+
+.carousel-inner {
+  justify-content: start; /* Align carousel items to the left */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  left: 0; /* Position sliders on the left */
+  right: auto; /* Reset right position */
+}
+
+.carousel-control-next {
+  left: 70%; /* Add some space between prev and next buttons */
+}
+
+.img-size {
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* to maintain aspect ratio */
+}
+.footer {
+  background-color: #129BFF;
+  color: #ffff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.address,
+.contact-info > div {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.address svg,
+.contact-info svg {
+  margin-right: 0.5rem;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
