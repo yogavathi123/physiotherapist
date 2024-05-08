@@ -1,19 +1,10 @@
 
-import React from 'react';
+import React,{useState} from 'react';
 import { Carousel } from 'react-bootstrap';
 import './App.css';
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBRow,
-  MDBCol,
-  MDBBtn
-} from 'mdb-react-ui-kit';
+
+
 import { faLocationArrow, faPhone , faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from "./images/logo1.png";
@@ -28,86 +19,93 @@ import bellspalsy from "./images/bellspalsy.jpg";
 import backpain from "./images/backpain.jpg";
 import img4 from "./images/clinic3.jpg";
 import img5 from "./images/clinic4.jpg";
-function App() {
+import Badge from 'react-bootstrap/Badge';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
- 
+import { NavLink } from "react-router-dom";
+import Footer from './Footer';
+import ReactDOM from 'react-dom';
+import Header from "./Components/Header";
+
+function App() {
+  // const MyContext = React.createContext(null);
+  const [showNavbar, setShowNavbar] = useState(false);
+
+    const handleShowNavbar = () => {
+        setShowNavbar(!showNavbar);
+    };
+
 
   return (
     <div>
+
+
+
     <div className="App">
    {/* heading */}
   <div >
- 
-  
+  {/* <button className="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span className="navbar-toggler-icon"></span>
+</button> */}
+<div className='header'>
+<Header />
+</div>
 
-<nav id="navbar-example2" className="navbar navbar-light bg-light" style={{ height: '50%' }}>
-  {/* <div class="image-container"> */}
-    <img src={logo} alt="Image" className="image-container" style={{ height: '30%' }} />
-  {/* </div> */}
-  <h1 className="heading" style={{ fontSize: '250%', alignItems:'left' }}>PHYSIOTHERAPIST</h1>
-  <ul className="nav nav-pills" style={{ fontSize: '14px' }}>
-    <li className="nav-item">
-      <a className="nav-link" href="#scrollspyHeading1">Home</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link" href="#scrollspyHeading2">Services</a>
-    </li>
-    <li className="nav-item"><a className="nav-link" href="#scrollspyHeading3">About</a></li>
-    <li className="nav-item"><a className="nav-link" href="#scrollspyHeading4">Review</a></li>
-    <li className="nav-item"><a className="nav-link" href="#scrollspyHeading5">Contact</a></li>
-  </ul>
-</nav>
+
+
+
 <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
   <h4 id="scrollspyHeading1"></h4>
-  <p> 
+  
   <div >
      <header className="App-header">
       <div className="text-container">
-      {/* <h1>Welcome to Our Clinic</h1>
-        <p>Get expert care for your healthcare needs.</p>
-        <button value='Book Appointment' type="Submit"  href="#scrollspyHeading5">Book Appointment</button><br></br> */}
+    
  
        <div className="text-container d-flex flex-row justify-content-start align-items-center">
-        
-        <p>
+         {/* <img src={img2} alt="Dr. Smith" className="rounded-full mr-4 img-size" /> */}
+        <div>
         <h1>Welcome to Our Clinic</h1>
         <p>Get expert care for your healthcare needs.</p>
         <button value='Book Appointment' type="Submit"  href="#scrollspyHeading5">Book Appointment</button><br></br>
       
-        </p>
+        </div>
+        
+        
         
        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
   <div class="carousel-inner justify-content-start">
     
     <div class="carousel-item active">
-      <img src={img1} class="d-block" style={{height:'60%', width: '90%'}} alt="..."/>
+      <img src={img1} class="d-block" style={{height:'60%', width: '70%',position:'relative'}} alt="..."/>
+    </div>
+    {/* <div class="carousel-item">
+      <img src={img4} class="d-block" style={{height:'20%', width: '90%'}} alt="..."/>
     </div>
     <div class="carousel-item">
-      <img src={img4} class="d-block" style={{height:'60%', width: '90%'}} alt="..."/>
-    </div>
-    <div class="carousel-item">
-      <img src={img5} class="d-block" style={{height:'60%', width: '90%'}} alt="..."/>
-    </div>
+      <img src={img5} class="d-block" style={{height:'80%', width: '90%'}} alt="..."/>
+    </div> */}
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+  {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
-  </button>
+  </button> */}
 </div>
 </div>
 
 </div>
     </header>
     </div>
-     </p>
 
 
   <h4 id="scrollspyHeading2"></h4>
-  <p>
+  
     
   <div class="doctorsname">
         <section class="py-5">
@@ -116,51 +114,97 @@ function App() {
     <div class="grid grid-cols-4 md:grid-cols-5 gap-4">
       <div class="bg-white p-6 shadow rounded">
       <h3 class="text-2xl font-bold text-center mb-7">Our Services</h3>
-      <Container>
-      <Row>
-        <Col xs={6} md={4}>
-          <img src={img1} class="rounded-full mr-4 img-size" />
-          <h4 class="font-bold mb-2">Knee Pain</h4>
+      <Container style={{position: "relative"}}>
+      <ListGroup as="ol" numbered>
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start"
+        
+      ><img src={img1} class="rounded-full mr-4 img-size" />
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Knee Pain</div>
         <p>Tailored treatments for Knee pain.</p>
-        </Col>
-        <Col xs={6} md={4}>
-          {/* <Image src="holder.js/171x180" roundedCircle /> */}
-          <img src={neckpain} class="rounded-full mr-4 img-size" />
-          <h4 class="font-bold mb-2">Neck Pain</h4>
-        <p>Including post-operative care and recovery.</p>
-        </Col>
-        <Col xs={6} md={4}>
-          <img src={backpain} class="rounded-full mr-4 img-size" />
-          <h4 class="font-bold mb-2">Back Pain</h4>
-        <p>Advanced treatments for Back pain.</p>
-        </Col>
-        <Col xs={6} md={4}>
+
+        </div>
+      </ListGroup.Item>
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start"
+      ><img src={neckpain} class="rounded-full mr-4 img-size" />
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Neck Pain</div>
+          Including post-operative care and recovery.
+        </div>
+      </ListGroup.Item>
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start"
+      ><img src={backpain} class="rounded-full mr-4 img-size" />
+
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Back Pain</div>
+          Advanced treatments for Back pain.
+        </div>
+      </ListGroup.Item>
+
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start">
           <img src={frozen} class="rounded-full mr-4 img-size" />
-          <h4 class="font-bold mb-2">Frozen Shoulder</h4>
-        <p>Treatments for frozen shoulder aim at reducing shoulder pain and preserving the range of motion. Treatments include medications.</p>
-        </Col>
-        <Col xs={6} md={4}>
+
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Frozen Shoulder</div>
+          Treatments for frozen shoulder aim at reducing shoulder pain and preserving the range of motion. Treatments include medications.
+        </div>
+      </ListGroup.Item>
+
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start">
           <img src={sciatica} class="rounded-full mr-4 img-size" />
-          <h4 class="font-bold mb-2">Sciatica</h4>
-        <p> Sciatica managed through manual therapy, devising exercise programs, acupuncture and providing rehabilitation for radiating lower back pain.</p>
-        </Col>
-        <Col xs={6} md={4}>
-          <img src={fractures} class="rounded-full mr-4 img-size" />
-          <h4 class="font-bold mb-2">Fractures</h4>
-        <p>Tailored treatments for Fractures.</p>
-        </Col>
-        <Col xs={6} md={4}>
-          <img src={stroke} class="rounded-full mr-4 img-size" />
-          <h4 class="font-bold mb-2">Stroke</h4>
-        <p>Treatment includes neurophysiological, motor learning, or orthopaedic principles..</p>
-        </Col>
-        <Col xs={6} md={4}>
-          <img src={bellspalsy} class="rounded-full mr-4 img-size" />
-          <h4 class="font-bold mb-2">Bell's palsy</h4>
-        <p>Treatment includes electrotherapy, massage, therapeutic exercise, pati ent feedback and heat therapy have been shown to accelerate recovery, improve facial functioning and reduce complications.</p>
-        </Col>
-      </Row>
-    </Container>
+
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Sciatica</div>
+          Sciatica managed through manual therapy, devising exercise programs, acupuncture and providing rehabilitation for radiating lower back pain.
+        </div>
+      </ListGroup.Item>
+
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start">
+         <img src={fractures} class="rounded-full mr-4 img-size" />
+
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Fractures</div>
+          Tailored treatments for Fractures.  
+          </div>
+      </ListGroup.Item>
+
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start">
+         <img src={stroke} class="rounded-full mr-4 img-size" />
+
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Stroke</div>
+          Treatment includes neurophysiological, motor learning, or orthopaedic principles. 
+          </div>
+      </ListGroup.Item>
+
+      <ListGroup.Item
+        as="li"
+        className="d-flex justify-content-between align-items-start">
+         <img src={bellspalsy} class="rounded-full mr-4 img-size" />
+
+
+        <div className="ms-2 me-auto">
+          <div className="fw-bold">Bell's palsy</div>
+          Treatment includes electrotherapy, massage, therapeutic exercise, patient feedback and heat therapy have been shown to accelerate recovery, improve facial functioning and reduce complications.
+          </div>
+      </ListGroup.Item>
+
+    </ListGroup>
+</Container>
      
       </div>
       
@@ -169,7 +213,7 @@ function App() {
 </section>
         </div>
 
-  </p>
+  {/* </p> */}
 
 
 
@@ -269,31 +313,41 @@ function App() {
           </form>
         </section>
       </main>
-
+{/* 
       <footer className="footer">
       <div className="footer-content">
         <div className="address">
-          <FontAwesomeIcon icon={faLocationArrow} />
-          Address: K.Pudur,Madurai- 625007
+          <FontAwesomeIcon icon={faLocationArrow} style={{ marginRight: '5px' }} />
+          <span>Address: K.Pudur,Madurai- 625007</span>
         </div>
         <div className="phone-number">
-          <FontAwesomeIcon icon={faPhone} />
-          Phone: <input  value="7708317381" />
+         <center> <FontAwesomeIcon icon={faPhone} style={{ marginRight: '5px' }} />
+          <span>Phone: 7708317381</span> </center>
         </div>
         <div className="email-address">
-            <FontAwesomeIcon icon={faEnvelope} />
-            Email: <a href="muhthar2001@gmail.com">muhthar2001@gmail.com</a>
+            <FontAwesomeIcon icon={faEnvelope} style={{ marginRight: '5px' }} />
+            <span>Email:muhthar2001@gmail.com </span>
           </div>
       </div>
-     
-    </footer>
-
+   <center><p>© 2024 Physiotherapy Clinic</p></center>
+    </footer> */}
+        
+    <div>
+            {/* <div
+                style={{
+                    minHeight: "400px",
+                    color: "green",
+                }}
+            >
+                <h1>GeeksforGeeks</h1>
+            </div> */}
+            <Footer />
+        </div>
 
   </p>
 </div>
 
      </div>
-      
 
       
     </div>
@@ -302,4 +356,5 @@ function App() {
 }
 
 export default App;
+
 
