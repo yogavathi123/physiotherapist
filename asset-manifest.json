@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/physiotherapist/static/css/main.2053514c.css",
-    "main.js": "/physiotherapist/static/js/main.362a20c4.js",
+    "main.css": "/physiotherapist/static/css/main.124a778d.css",
+    "main.js": "/physiotherapist/static/js/main.69de62fc.js",
     "static/js/453.74ced3bc.chunk.js": "/physiotherapist/static/js/453.74ced3bc.chunk.js",
     "static/media/bellspalsy.jpg": "/physiotherapist/static/media/bellspalsy.5b71d0251cd7089e4d29.jpg",
     "static/media/profile1.jpg": "/physiotherapist/static/media/profile1.1144ee8950321af78a65.jpg",
@@ -24,12 +24,12 @@
     "static/media/fa-v4compatibility.ttf": "/physiotherapist/static/media/fa-v4compatibility.c8e090db312b0bea2aa2.ttf",
     "static/media/fa-v4compatibility.woff2": "/physiotherapist/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/physiotherapist/index.html",
-    "main.2053514c.css.map": "/physiotherapist/static/css/main.2053514c.css.map",
-    "main.362a20c4.js.map": "/physiotherapist/static/js/main.362a20c4.js.map",
+    "main.124a778d.css.map": "/physiotherapist/static/css/main.124a778d.css.map",
+    "main.69de62fc.js.map": "/physiotherapist/static/js/main.69de62fc.js.map",
     "453.74ced3bc.chunk.js.map": "/physiotherapist/static/js/453.74ced3bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2053514c.css",
-    "static/js/main.362a20c4.js"
+    "static/css/main.124a778d.css",
+    "static/js/main.69de62fc.js"
   ]
 }
