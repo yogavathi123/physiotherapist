@@ -2,38 +2,39 @@
     position: fixed;
     display: flex;
     top: 0; /* Stick it to the top */
-    max-height: 70px;
+    max-height: 80px;
     width: 100%;
   
     display: grid;
     grid-template-areas: "logo nav";
   
     /* Cosmetics */
-    background-color: #222427;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffff;
+    box-shadow: 0 4px 8px 0 rgba(171, 139, 139, 0.2);
   }
   
   .Logo {
     grid-area: logo;
-    height: 70px;
+    height: 80px;
   }
   
   .Nav {
     display: grid;
     grid-area: nav;
-    grid-template-columns: repeat(6, auto);
-    align-items: center;
-    justify-items: center;
+    grid-template-columns: repeat(7, auto);
+    align-items: top;
+    padding-top: 1.5rem;
+    justify-items: left;
   }
   .heading1{
     color:#fff;
   padding-left: 0rem;
-  padding-top: 1rem;
-  padding-right: 19rem;
+  padding-top: 12%;
+  /* padding-right: 1rem; */
   }
   .Nav a {
-    color: #fff;
-    font-size: 98%;
+    color: #129bff;
+    font-size: 95%;
     font-weight: 400;
     transition: 0.5s;
     text-decoration: none;
@@ -81,7 +82,7 @@
       grid-template-areas: "logo burger" "nav nav";
     }
     .Nav {
-      grid-template-rows: repeat(4, auto);
+      grid-template-rows: repeat(5, auto);
       grid-template-columns: none;
       grid-row-gap: 20px;
   
@@ -113,4 +114,20 @@
     transform: scale(0.5);
     transition: opacity 350ms, transform 350ms;
   }
-  
+  .LogoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.Logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Add spacing between the logo and heading */
+}
+
+.Heading {
+    margin: 4; /* Remove default margin */
+    color: #20e300; /* Set text color */
+    font: size 1.5em;
+    margin-top: 3%;
+}

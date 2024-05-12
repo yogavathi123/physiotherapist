@@ -3,10 +3,68 @@
   padding: 0rem;
 }
 
+
+.App-header3 {
+  padding: 15%;
+  background-color: #129BFF;
+}
+
+.content-container3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-container3 {
+  flex: 1;
+  padding: 20px;
+  color:#FFff;
+}
+
+.image-container3 {
+  flex: 1;
+  text-align: center;
+}
+
+.image-container3 img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .content-container3 {
+    flex-direction: column;
+  }
+
+  .text-containe3r,
+  .image-container3 {
+    width: 100%;
+  }
+
+  .image-container3 img {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+
+
+/* for serices section */
+
+
+   
+
+
+
+
+
+
+
 .App-header {
   margin-top: 1rem;
-  background-color: #129bff;
-  color: #ffff;
+  background-color: #ffff;
+  color: #129BFF;
   padding: 6rem;
 }
 .heading {
@@ -57,11 +115,15 @@ textarea {
   border-radius: 0.25rem;
 }
 .doctorsname{
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   background-color: #ffff;
   padding: 0.5rem;
   
 }
+
+
+
+
 .doctorsname1{
   margin-top: 2rem;
   background-color: #129BFF;
@@ -111,7 +173,7 @@ footer {
 }
 
 .fixed-container {
-  display: fixed;
+  display: flex;
   justify-content: right;
   align-items: right;
 }
@@ -207,7 +269,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #064cff;
   background-color: #f7f7f7;
 }
 .navbar {
@@ -220,5 +282,17 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 5px;
+}
+
+
+.content-below {
+  font-display:unset;
+  top: 100px; /* Position the content below the main content */
+  display: flex;
+  justify-content: center;
+}
+
+.content-below .card {
+  width: 18rem;
 }
 
